@@ -127,7 +127,8 @@ export class EventService {
   private getDelayForJob(time: string) {
     const startTime = new Date(time);
     const currentTime = new Date();
-    return startTime.getTime() - currentTime.getTime() - 3 * 60 * 1000;
+    const delayInMin = 30;
+    return startTime.getTime() - currentTime.getTime() - delayInMin * 60 * 1000;
   }
 
   /**
